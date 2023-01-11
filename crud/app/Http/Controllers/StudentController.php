@@ -33,7 +33,7 @@ class StudentController extends Controller
     	$validation = Validator::make($request->all(),[
     		'name' => 'required',
     		'department'=> 'required',
-    		'email' => 'required|email|email:unique',
+    		'email' => 'required|email|unique:students',
             'image' => 'required|mimes:jpg,jpeg,png,gif',
     		'course' => 'required',
 			'dob' => 'required',
